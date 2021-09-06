@@ -7,8 +7,12 @@ export const HeroList = ({publisher}) => {
 
 	return (
 		<div className='card-columns'>
-			{heroes.map((hero) => (
-				<HeroCard key={hero.id} {...hero} />
+			{heroes.map((hero, index) => (
+				<div
+					className='animate__animated animate__fadeInUp'
+					style={{animationDelay: `${index * 20}ms`}}>
+					<HeroCard key={hero.id} {...hero} />
+				</div>
 			))}
 		</div>
 	);
