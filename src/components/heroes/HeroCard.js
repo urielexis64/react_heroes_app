@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 export const HeroCard = ({id, superhero, alter_ego, first_appearance, characters}) => {
 	return (
 		<div
-			className='card ms-3'
+			className='card ms-3 animate__animated animate__fadeInUp'
 			style={{
 				maxWidth: 540,
 			}}>

@@ -8,10 +8,8 @@ export const HeroList = ({publisher}) => {
 	return (
 		<div className='card-columns'>
 			{heroes.map((hero, index) => (
-				<div
-					className='animate__animated animate__fadeInUp'
-					style={{animationDelay: `${index * 20}ms`}}>
-					<HeroCard key={hero.id} {...hero} />
+				<div key={hero.id} style={{animationDelay: `${index * 20}ms`}}>
+					<HeroCard {...hero} />
 				</div>
 			))}
 		</div>
