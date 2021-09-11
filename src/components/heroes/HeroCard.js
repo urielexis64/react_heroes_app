@@ -1,7 +1,9 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import {heroImages} from "../../helpers/heroImages";
 
 export const HeroCard = ({id, superhero, alter_ego, first_appearance, characters}) => {
+	console.log(heroImages(`./${id}.jpg`));
 	return (
 		<div
 			className='card ms-3 animate__animated animate__fadeInUp'
@@ -10,7 +12,11 @@ export const HeroCard = ({id, superhero, alter_ego, first_appearance, characters
 			}}>
 			<div className='row no-gutters'>
 				<div className='col-md-4'>
-					<img src={`./assets/heroes/${id}.jpg`} className='card-img' alt={superhero} />
+					<img
+						src={heroImages(`./${id}.jpg`).default}
+						className='card-img'
+						alt={superhero}
+					/>
 				</div>
 				<div className='col-md-8'>
 					<div className='card-body'>
